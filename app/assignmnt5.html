@@ -1,0 +1,115 @@
+ <!-- <!DOCTYPE html>
+<html>
+    <head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>    -->
+
+    <body ng-controller="ass5Controller" class="container">
+        <form name="registrationForm"  ng-submit="submitForm(registrationForm.$valid)" novalidate="">
+       
+            First Name:
+            <input  name="firstName" ng-model="userData.firstName" placeholder="First name" required>
+            <span style="color:red" ng-show="registrationForm.firstName.$touched && registrationForm.firstName.$invalid">The first name is required.</span>
+            
+            <br>
+            <br>
+            Last Name : <input  type="text" name="lastName" ng-model="userData.lastName" placeholder="Last name" required />
+            <span style="color:red" ng-show="registrationForm.lastName.$touched && registrationForm.lastName.$invalid">The last name is required.</span>
+            <br>
+            <br>
+            Email : <input  type="email" name="input" ng-model="userData.email" placeholder="email@abc.com" required/>
+            <span  style="color:red" class="error" ng-show="registrationForm.input.$error.required"> Required!</span>
+            <span style="color:red" class="error" ng-show="registrationForm.input.$error.email"> Not valid email!</span>
+           <br>
+            <br>
+            Phone Number :<input  type="tel" name="phone"ng-model="userData.phoneNumber" placeholder="000-000-0000" ng-minlength="10" required />
+             <span  style="color:red" class="error" ng-show="registrationForm.phone.$error.required"> Required!</span>
+             <span style="color:red"  class="error" ng-show="registrationForm.phone.$error.minlength">Input is too short!</span>
+            <br>
+            <br>
+            Gender :
+            <select ng-model="userData.gender">
+                <option value="">--Select Gender--
+                <option value="male">Male
+                <option value="female">Female
+                <option value="transgender">Transgender
+            </select>
+            <br>
+            <br>
+            Loaction :
+            <select ng-model="userData.location">
+                <option value="">--Select Location--
+                <option value="mumbai">Mumbai
+                <option value="pune">Pune
+                <option value="nasik">Nasik
+                <option value="indore">Indore
+                <option value="chandigarh">Chandigarh
+            </select>
+            <br>
+            <br>
+
+            <button class="btn btn-primary btn-large center" type="submit" ng-disabled="registrationForm.$invalid && !conditions">Submit</button>
+                
+            <button class="btn btn-primary btn-large center" type="reset" ng-click="reset()">Clear</button>
+
+          <table border="1" class="table table-striped">
+              <tr>
+                  <td>First Name</td>
+                  <td>Last Name</td>
+                  <td>Email </td>
+                  <td>Phone Number</td>
+                  <td>Gender</td>
+                  <td>Location</td>
+              </tr>
+                <tr >
+                    <td>{{displayArray[0]}} </td>
+                    <td>{{displayArray[1]}} </td>
+                    <td>{{displayArray[2]}} </td>
+                    <td>{{displayArray[3]}} </td>
+                    <td>{{displayArray[4]}} </td>
+                    <td>{{displayArray[5]}} </td>
+
+
+                
+
+        
+        
+        </form>
+<!-- <script>
+    var app = angular.module('app', [],function() {});
+    
+    
+    
+    app.controller('ass5Controller' ,function ($scope ) {
+            $scope.displayArray = [];
+            $scope.userData = {};
+            $scope.submitForm = function(isValid)
+            {
+                if(isValid){
+                $scope.displayArray.push($scope.userData.firstName);
+                $scope.displayArray.push($scope.userData.lastName);
+                $scope.displayArray.push($scope.userData.email);
+                $scope.displayArray.push($scope.userData.phoneNumber);
+                $scope.displayArray.push($scope.userData.gender);
+                $scope.displayArray.push($scope.userData.location);
+
+            }
+            console.log($scope.displayArray);
+    };
+
+    $scope.reset = function() {
+    $scope.displayArray = {};
+};
+
+});
+
+
+</script>
+
+
+
+
+        </body>
+
+</html> -->
+

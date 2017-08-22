@@ -1,0 +1,53 @@
+<!-- <html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body> -->
+
+<div>
+<div >
+    <label>Search :</label>
+    <input   type="text" ng-model="searchKeyword"/>
+    <br>
+    <br>
+    <label>--Employee Table--</label>
+    <table ng-controller="ass3Controller" border="1" class="table table-striped" >
+        <tr> <td>Id</td>
+            <td>NAME</td>
+            <td>TECHNOLOGY</td></tr>
+        
+        <tr ng-repeat="e in emp | orderBy:Id |filter:searchKeyword" >
+           
+            <td>{{e.Id}}</td>
+            <td>{{e.Name}}</td>
+            <td>{{e.Technology}}</td>
+        </tr>
+    </table>
+</div>
+
+</div>
+
+<!-- <script>
+
+var app = angular.module('app', []);
+
+app.controller('ass3Controller', function ($scope) {
+
+    $scope.emp=[
+        {"Id":1 ,"Name":'Snehal', "Technology":'EBS'},
+        {"Id":2 ,"Name":'Sneha', "Technology":'ECS'},
+        {"Id":3 ,"Name":'Mohit', "Technology":'EBS'},
+        {"Id":4 ,"Name":'Rahul', "Technology":'ECS'}
+    ]
+
+
+    
+});
+
+
+
+
+
+
+</script>
+</body>
+</html> -->
+

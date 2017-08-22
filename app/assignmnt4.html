@@ -1,0 +1,20 @@
+<!-- <!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body> -->
+
+<div>
+ 
+<p ng-init="FirstName='Snehal';LastName='Patil' ;amount=100">Question no-1 </p>
+<p>First Name: <input  type="text" ng-model="FirstName"></p>
+<p>Last Name: <input  type="text" ng-model="LastName"></p> 
+<p>Amount : <input  type="number" ng-model="amount"></p> 
+Uppercase Name :{{FirstName + " "+ LastName | uppercase }}
+<br>
+Lowercase Name : {{FirstName + " "+ LastName | lowercase }}
+<br>
+Amount : {{amount | currency}} 
+</div>
+
+<!-- </body>
+</html> -->

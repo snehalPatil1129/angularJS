@@ -1,0 +1,24 @@
+
+ <div  ng-controller="ass6Controller" >
+ <h1> --Order Table--</h1>
+
+   
+   <table border="1"  class="table table-striped" >
+        <tr> <td>CheckBox</td>
+            <td>Order Name</td>
+            <td>Price</td></tr>
+            <tr ng-repeat="x in names">
+                <td><input type="checkbox" ng-model="item.isSelected" ng-change="value(item.isSelected,x)"/></td>
+                 <td>{{x.name}}</td>
+                <td>{{x.price}}</td> 
+            </tr>
+            <tr>
+                <td>Total Price </td>
+                <td>             </td>
+                <td> {{selectedItems| getprice }}</td>
+            </tr>
+   </table>
+       
+    
+    </div>
+
